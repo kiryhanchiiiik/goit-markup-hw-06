@@ -18,7 +18,8 @@
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="css/styles.css" />
+    <!-- <link rel="stylesheet" href="css/styles.css" /> -->
+    <link rel="stylesheet" href="./css/mob-styles.css" />
   </head>
   <body>
     <!--======HEADER======-->
@@ -28,7 +29,7 @@
           <a href="./index.html" class="logo-type">
             Web<span class="logotype_2">Studio</span></a
           >
-          <ul class="secondnavigation">
+          <ul class="secondnavigation hidden">
             <li class="navigation-item">
               <a href="./index.html" class="navigation studio-navigation"
                 >Studio</a
@@ -38,7 +39,7 @@
             <li><a href="#" class="navigation">Contacts</a></li>
           </ul>
         </nav>
-        <address class="address">
+        <address class="address hidden">
           <ul class="contact_list">
             <li>
               <a
@@ -54,8 +55,13 @@
             </li>
           </ul>
         </address>
+        <button class="header-burger" type="button">
+          <svg class="mobile-svg-burger" width="24" height="24">
+            <use href="./images/icons.svg#icon-burger"></use>
+          </svg>
+        </button>
       </div>
-      <div class="modal-menu">
+      <div class="modal-menu hidden">
         <div class="modal-menu-window">
           <div class="div-modal-button">
             <button class="modal-button">
@@ -77,12 +83,60 @@
               </li>
             </ul>
           </nav>
+          <address class="mob-menu-adress">
+            <ul class="mob-menu-list">
+              <li class="mob-menu-contact">
+                <a class="mob-menu-contact-item" href="tel:+110001111111"
+                  >+11 (000) 111-11-11</a
+                >
+              </li>
+              <li class="mob-menu-contact">
+                <a
+                  class="mob-menu-contact-item"
+                  href="mailto:info@devstudio.com"
+                  >info@devstudio.com</a
+                >
+              </li>
+            </ul>
+          </address>
+          <div class="mob-social-media">
+            <ul class="mob-social-media-list">
+              <li class="mob-social-media-svg">
+                <a class="mob-social-media-link" href="./index.html">
+                  <svg class="mob-svg" width="24" height="24">
+                    <use href="./images/icons.svg#icon-instagram"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="mob-social-media-svg">
+                <a class="mob-social-media-link" href="./index.html">
+                  <svg class="mob-svg" width="24" height="24">
+                    <use href="./images/icons.svg#icon-twitter"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="mob-social-media-svg">
+                <a class="mob-social-media-link" href="./index.html">
+                  <svg class="mob-svg" width="24" height="24">
+                    <use href="./images/icons.svg#icon-facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="mob-social-media-svg">
+                <a class="mob-social-media-link" href="./index.html">
+                  <svg class="mob-svg" width="24" height="24">
+                    <use href="./images/icons.svg#icon-in"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </header>
     <!--======MAIN======-->
     <main>
-      <!--======SECTION-ONE======-->
+      <!-- ======SECTION-ONE======-->
       <section class="section-one">
         <div class="container section-container">
           <h1 class="zagolovok">Effective Solutions for Your Business</h1>
@@ -96,7 +150,7 @@
           <ul class="list">
             <li class="first">
               <div class="icon-container">
-                <svg width="64" height="64">
+                <svg class="hidden" width="64" height="64">
                   <use href="./images/icons.svg#icon-antenna"></use>
                 </svg>
               </div>
@@ -108,7 +162,7 @@
             </li>
             <li class="first">
               <div class="icon-container">
-                <svg width="64" height="64">
+                <svg class="hidden" width="64" height="64">
                   <use href="./images/icons.svg#icon-clock"></use>
                 </svg>
               </div>
@@ -120,7 +174,7 @@
             </li>
             <li class="first">
               <div class="icon-container">
-                <svg width="64" height="64">
+                <svg class="hidden" width="64" height="64">
                   <use href="./images/icons.svg#icon-diagram"></use>
                 </svg>
               </div>
@@ -132,7 +186,7 @@
             </li>
             <li class="first">
               <div class="icon-container">
-                <svg width="64" height="64">
+                <svg class="hidden" width="64" height="64">
                   <use href="./images/icons.svg#icon-astronaut"></use>
                 </svg>
               </div>
@@ -146,7 +200,7 @@
         </div>
       </section>
       <!--======SECTION-THREE======-->
-      <section class="section-three">
+      <section class="section-three hidden">
         <div class="container">
           <h2 class="team">Our Team</h2>
           <ul class="workers">
@@ -302,7 +356,7 @@
         </div>
       </section>
       <!--======SECTION-FOUR======-->
-      <section class="section-four">
+      <section class="section-four hidden">
         <div class="container container-portfolio">
           <h2 class="portfolio">Our Portfolio</h2>
           <ul class="portfolio-list">
@@ -425,7 +479,7 @@
       </section>
     </main>
     <!--======FOOTER======-->
-    <footer class="footer">
+    <footer class="footer hidden">
       <div class="container footer-container">
         <div class="footer-div">
           <a href="./index.html" class="logo-type-footer">
@@ -491,7 +545,7 @@
       </div>
     </footer>
     <!-- modal-window -->
-    <div class="modal-div">
+    <div class="modal-div hidden">
       <div class="modal-window">
         <button class="btn-modal" type="button">
           <svg class="modal-svg" width="8" height="8">
