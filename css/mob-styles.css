@@ -704,7 +704,7 @@ a {
 }
 
 /* ====================TABLET================ */
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) and (max-width: 1157px) {
   button {
     display: block;
     cursor: pointer;
