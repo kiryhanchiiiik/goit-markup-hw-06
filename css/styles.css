@@ -523,6 +523,7 @@ section {
 .svg-form {
   margin-left: 16px;
 }
+/* =============modal-footer============== */
 .modal-div {
   position: fixed;
   top: 0;
@@ -721,7 +722,7 @@ section {
   opacity: 1;
   visibility: visible;
 }
-@media (min-resolution: 192dpi) and (min-width: 320px) {
+/* @media (min-resolution: 192dpi) and (min-width: 320px) {
   .modal-button {
     display: flex;
     justify-content: center;
@@ -759,8 +760,8 @@ section {
 .modal-item-link:hover,
 .modal-item-link:focus {
   color: #404bbf;
-}
-.mob-menu-contact-item {
+} */
+/* .mob-menu-contact-item {
   font-style: normal;
   font-weight: 500;
   font-size: 20px;
@@ -804,7 +805,7 @@ section {
 .mob-social-media-link:hover,
 .mob-social-media-link:focus {
   background-color: #31d0aa;
-}
+} */
 /* @media (min-resolution: 192dpi) and (min-width: 320px) {
   .section-one {
     max-width: 320px;
