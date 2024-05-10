@@ -11,23 +11,33 @@
 .mob-menu-contact-item:focus {
   color: #4d5ae5;
 }
+.container-modal {
+  max-width: 320px;
+  margin: 0;
+}
 .mob-menu-contact {
   margin-bottom: 24px;
 }
 .mob-svg {
   fill: #f4f4fd;
 }
-.mob-menu-list {
-  margin-bottom: 48px;
-}
 .mob-social-media-list {
   display: flex;
   justify-content: center;
   gap: 40px;
 }
+.modal-ul li:last-child {
+  margin-bottom: 0;
+}
+.mob-menu-list li:last-child {
+  margin-bottom: 0;
+}
 .mob-social-media-svg {
   width: 40px;
   height: 40px;
+}
+.mob-menu-adress {
+  margin-bottom: 48px;
 }
 .mob-social-media-link {
   display: flex;
@@ -43,7 +53,9 @@
 .mob-social-media-link:focus {
   background-color: #31d0aa;
 }
-
+.modal-window-nav {
+  margin-bottom: auto;
+}
 .modal-menu {
   width: 100%;
   height: 100%;
@@ -54,11 +66,17 @@
   z-index: 999;
   top: 0;
   left: 0;
-  padding: 72px 16px 40px;
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12),
     0 2px 1px 0 rgba(0, 0, 0, 0.2);
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
     visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-menu-window {
+  padding: 72px 16px 40px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 .modal-menu.is-open {
   opacity: 1;
@@ -81,10 +99,6 @@
   background-color: #fdfdff;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     border 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.modal-ul {
-  padding-left: 16px;
-  margin-bottom: 168px;
 }
 .modal-item {
   margin-bottom: 40px;
@@ -153,6 +167,13 @@
 .btn-modal:focus {
   background-color: #404bbf;
   border: none;
+}
+/* static color for modal items */
+.modal-ul .modal-item:first-child a {
+  color: #404bbf;
+}
+.mob-menu-list .mob-menu-contact:first-child a {
+  color: #404bbf;
 }
 .modal-svg {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -328,8 +349,8 @@ img {
   height: auto;
 }
 section {
-  padding-top: 120px;
-  padding-bottom: 120px;
+  padding-top: 96px;
+  padding-bottom: 96px;
 }
 h1,
 h2,
@@ -348,6 +369,11 @@ a {
   text-decoration: none;
 }
 /* ==============shapka============== */
+.header {
+  border-bottom: 1px solid #e7e9fc;
+  box-shadow: 0 1px 6px 0 rgba(46, 47, 66, 0.08),
+    0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 2px 1px 0 rgba(46, 47, 66, 0.08);
+}
 .logo-type {
   font-family: "Raleway", sans-serif;
   font-weight: 700;
@@ -357,7 +383,7 @@ a {
   text-transform: uppercase;
   color: #4d5ae5;
   display: block;
-  margin-top: 16px;
+  padding-top: 16px;
   padding-bottom: 16px;
 }
 .logotype_2 {
@@ -367,6 +393,7 @@ a {
   border: none;
   background-color: transparent;
   cursor: pointer;
+  padding: 0;
 }
 .header-container {
   display: flex;
@@ -388,6 +415,18 @@ a {
   background-size: cover;
   background-position: center center;
   height: 432px;
+}
+@media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .section-one {
+    background-image: linear-gradient(
+        to bottom,
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/mobile-images/backgound-image-mob-x2.jpg);
+  }
 }
 .zagolovok {
   font-weight: 700;
@@ -739,7 +778,7 @@ a {
     align-items: center;
     justify-content: space-between;
   }
-  .mobile-svg-burger {
+  .header-burger {
     display: none;
   }
   .firstnavigation {
@@ -802,10 +841,10 @@ a {
     display: flex;
     flex-direction: column;
     gap: 12px;
-    margin-left: 122px;
   }
   .address {
     display: block;
+    margin-left: auto;
   }
   .contacts {
     font-weight: 400;
@@ -825,6 +864,19 @@ a {
       ),
       url(../images/mobile-images/tablet-background-x1.jpg);
   }
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .section-one {
+      background-image: linear-gradient(
+          to bottom,
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url(../images/mobile-images/background-tab-x2.jpg);
+    }
+  }
+
   .zagolovok {
     max-width: 496px;
     font-weight: 700;
@@ -841,6 +893,7 @@ a {
   .list {
     display: flex;
     gap: 24px;
+    row-gap: 72px;
     flex-wrap: wrap;
   }
   .first {
@@ -852,7 +905,6 @@ a {
   }
   /* section-threee */
   .workers {
-    width: 768px;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -887,7 +939,7 @@ a {
     display: flex;
     flex-wrap: wrap;
     column-gap: 24px;
-    margin-left: 108px;
+    padding-left: 108px;
   }
   .par-form {
     text-align: left;
@@ -903,6 +955,13 @@ a {
   .modal-window {
     width: 408px;
     height: 584px;
+  }
+  .input-form {
+    width: 264px;
+  }
+  /* modal widnow header */
+  .modal-menu {
+    display: none;
   }
 }
 /* ==================dekstop=============== */
@@ -928,6 +987,9 @@ a {
   .second-contact {
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
+  .address {
+    margin-left: auto;
+  }
   /* section 1 */
   .section-one {
     width: 1440px;
@@ -941,6 +1003,19 @@ a {
     padding-top: 188px;
     height: 589px;
   }
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .section-one {
+      background-image: linear-gradient(
+          to bottom,
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url(../images/background-pc-x2.jpg);
+    }
+  }
+
   .buttonn {
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
@@ -974,6 +1049,7 @@ a {
     color: #2e2f42;
   }
   .pharagraf {
+    font-weight: 400;
     line-height: 1.5;
   }
 
@@ -987,29 +1063,33 @@ a {
     flex-wrap: nowrap;
     gap: 24px;
     justify-content: center;
-    width: calc(100% - 24px);
-    margin: 0 auto;
   }
   .list-item {
-    max-width: calc((100% - 24px) / 2);
+    max-width: calc((100% - 72px) / 4);
   }
   .social-item:hover,
   .social-item:focus {
     background-color: #404bbf;
+  }
+  .paragraf-names {
+    margin-bottom: 8px;
   }
   /* foooterr */
   .footer-container {
     margin: 0 auto;
     align-items: baseline;
     gap: 0;
-    padding-left: 0;
+    padding-left: 15px;
     text-align: left;
   }
   .footer-div {
     margin-right: 120px;
   }
   .social-footer {
-    margin-right: 72px;
+    margin-right: auto;
+  }
+  .div-form {
+    margin: 0;
   }
   .input-form {
     width: 264px;
