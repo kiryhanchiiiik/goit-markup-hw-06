@@ -71,6 +71,13 @@
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
     visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+.label-checkbox {
+  display: flex;
+  align-items: center;
+}
+.span-checkbox {
+  flex-shrink: 0;
+}
 .modal-menu-window {
   padding: 72px 16px 40px;
   position: relative;
